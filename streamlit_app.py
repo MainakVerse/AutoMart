@@ -217,7 +217,7 @@ with tabs[0]:
     col1, col2 = st.columns(2)
     
     with col1:
-        #st.markdown("<div class='card'>", unsafe_allow_html=True)
+        #
         brand = st.selectbox('Brand', options=list(brand_mapping.keys()))
         year = st.number_input("Car Age (years)", min_value=1, max_value=50, value=5, step=1)
         km = st.number_input("Kilometers Driven", min_value=0, max_value=300000, value=50000, step=1000)
@@ -226,7 +226,7 @@ with tabs[0]:
         st.markdown("</div>", unsafe_allow_html=True)
     
     with col2:
-        st.markdown("<div class='card'>", unsafe_allow_html=True)
+        
         owner_type = st.selectbox('Owner Type', options=list(owner_type_mapping.keys()))
         location = st.selectbox('Location', options=list(location_mapping.keys()))
         mileage = st.number_input("Mileage (km/l)", min_value=0.0, max_value=50.0, value=15.0, step=0.1)
@@ -266,7 +266,7 @@ with tabs[0]:
                 predicted_value = abs(float(predicted_value[0] if isinstance(predicted_value, np.ndarray) else predicted_value))
                 
                 # Show the predicted sale price with animation
-                st.markdown("<div class='card'>", unsafe_allow_html=True)
+                
                 st.markdown("<h3>Estimated Market Value:</h3>", unsafe_allow_html=True)
                 
                 # Display with animation
@@ -307,7 +307,7 @@ with tabs[1]:
         
         with col1:
             if i < len(car_types):
-                st.markdown("<div class='card'>", unsafe_allow_html=True)
+                
                 st.image(car_types[i]["image"], caption=car_types[i]["name"])
                 st.markdown(f"<h3>{car_types[i]['name']}</h3>", unsafe_allow_html=True)
                 st.write(car_types[i]["description"])
@@ -315,14 +315,14 @@ with tabs[1]:
         
         with col2:
             if i+1 < len(car_types):
-                st.markdown("<div class='card'>", unsafe_allow_html=True)
+                
                 st.image(car_types[i+1]["image"], caption=car_types[i+1]["name"])
                 st.markdown(f"<h3>{car_types[i+1]['name']}</h3>", unsafe_allow_html=True)
                 st.write(car_types[i+1]["description"])
                 st.markdown("</div>", unsafe_allow_html=True)
     
     # Additional information about car classification
-    st.markdown("<div class='card'>", unsafe_allow_html=True)
+    
     st.markdown("<h3>Understanding Car Classifications</h3>", unsafe_allow_html=True)
     st.write("""
     Car classifications are based on various factors including body style, size, engine type, and intended use.
