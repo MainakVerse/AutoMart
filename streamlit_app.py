@@ -329,8 +329,8 @@ with tabs[1]:
 
 # Tab 3: Expert Advice
 with tabs[2]:
-    st.markdown("<h2>AI Laptop Expert</h2>", unsafe_allow_html=True)
-    st.markdown("<p>Get personalized advice for your laptop needs</p>", unsafe_allow_html=True)
+    st.markdown("<h2>AI Car Expert</h2>", unsafe_allow_html=True)
+    st.markdown("<p>Get personalized advice for your motor spirits</p>", unsafe_allow_html=True)
     
     # Initialize session state
     if 'messages' not in st.session_state:
