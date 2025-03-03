@@ -184,7 +184,7 @@ car_types = [
 with st.sidebar:
     st.markdown("""
     <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://i.ibb.co/99wfC0B/autovault-logo.png" width="150" onerror="this.onerror=null; this.src='https://thumbs.dreamstime.com/b/super-vector-car-logo-design-illustration-sleek-scalable-representing-automotive-speed-precision-modern-aesthetics-ideal-333985488.jpg'">
+        <img src="https://thumbs.dreamstime.com/b/super-vector-car-logo-design-illustration-sleek-scalable-representing-automotive-speed-precision-modern-aesthetics-ideal-333985488.jpg" width="150" onerror="this.onerror=null; this.src='https://thumbs.dreamstime.com/b/super-vector-car-logo-design-illustration-sleek-scalable-representing-automotive-speed-precision-modern-aesthetics-ideal-333985488.jpg'">
         <h1 style="margin-top: 10px; font-size: 2rem;">AutoVault</h1>
     </div>
     """, unsafe_allow_html=True)
