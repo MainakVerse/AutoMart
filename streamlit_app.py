@@ -374,10 +374,10 @@ with tabs[2]:
                 
                 # Prepare prompt with context
                 context = """
-                You are a laptop expert advisor. Provide helpful, accurate advice about laptops.
+                You are a car expert advisor. Provide helpful, accurate advice about cars.
                 Focus on the user's specific needs and interests. Your advice should be technical
-                but easy to understand. Recommend specific features based on use cases like gaming,
-                productivity, design work, etc. Keep responses concise and helpful.
+                but easy to understand. Recommend specific features based on use cases like milage,
+                transmission, engine power, braking, carburetor needs etc. Keep responses concise and helpful.
                 """
                 
                 try:
