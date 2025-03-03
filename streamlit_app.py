@@ -217,7 +217,7 @@ with tabs[0]:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("<div class='card'>", unsafe_allow_html=True)
+        #st.markdown("<div class='card'>", unsafe_allow_html=True)
         brand = st.selectbox('Brand', options=list(brand_mapping.keys()))
         year = st.number_input("Car Age (years)", min_value=1, max_value=50, value=5, step=1)
         km = st.number_input("Kilometers Driven", min_value=0, max_value=300000, value=50000, step=1000)
