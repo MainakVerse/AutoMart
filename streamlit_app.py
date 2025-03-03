@@ -22,8 +22,8 @@ st.markdown("""
     :root {
         --background-color: #121212;
         --text-color: #00FF41;
-        --accent-color: #0F0;
-        --secondary-color: #008F11;
+        --accent-color: #ff0000;
+        --secondary-color: #ff6600;
     }
     
     .main {
