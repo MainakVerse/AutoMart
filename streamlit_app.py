@@ -155,27 +155,27 @@ brand_mapping = {
 car_types = [
     {
         "name": "Sedan",
-        "image": "/api/placeholder/400/200",
+        "image": "https://cdn-icons-png.flaticon.com/512/2736/2736906.png",
         "description": "Sedans are four-door passenger cars with a separate trunk compartment. They typically offer comfortable seating for 4-5 passengers with good fuel efficiency and a smooth ride."
     },
     {
         "name": "SUV",
-        "image": "/api/placeholder/400/200",
+        "image": "https://png.pngtree.com/png-clipart/20220302/original/pngtree-suv-car-mobil-icon-vector-png-image_7361517.png",
         "description": "Sport Utility Vehicles combine elements of passenger cars with features from off-road vehicles. They offer higher seating position, more cargo space, and often come with all-wheel drive capability."
     },
     {
         "name": "Hatchback",
-        "image": "/api/placeholder/400/200",
+        "image": "https://cdn-icons-png.flaticon.com/512/6047/6047336.png",
         "description": "Hatchbacks are compact cars with a rear door that opens upward, offering versatile cargo space. They're fuel-efficient, easy to park, and popular in urban environments."
     },
     {
         "name": "Luxury",
-        "image": "/api/placeholder/400/200",
+        "image": "https://cdn-icons-png.flaticon.com/512/683/683092.png",
         "description": "Luxury cars focus on comfort, performance, and cutting-edge technology. They typically feature premium materials, advanced safety features, and powerful engines."
     },
     {
         "name": "Electric",
-        "image": "/api/placeholder/400/200",
+        "image": "https://cdn-icons-png.flaticon.com/512/4564/4564602.png",
         "description": "Electric vehicles run on electricity stored in rechargeable batteries. They produce zero emissions, have lower operating costs, and offer instant torque for responsive acceleration."
     }
 ]
@@ -184,7 +184,7 @@ car_types = [
 with st.sidebar:
     st.markdown("""
     <div style="text-align: center; margin-bottom: 20px;">
-        <img src="https://i.ibb.co/99wfC0B/autovault-logo.png" width="150" onerror="this.onerror=null; this.src='/api/placeholder/150/150'">
+        <img src="https://i.ibb.co/99wfC0B/autovault-logo.png" width="150" onerror="this.onerror=null; this.src='https://thumbs.dreamstime.com/b/super-vector-car-logo-design-illustration-sleek-scalable-representing-automotive-speed-precision-modern-aesthetics-ideal-333985488.jpg'">
         <h1 style="margin-top: 10px; font-size: 2rem;">AutoVault</h1>
     </div>
     """, unsafe_allow_html=True)
