@@ -332,61 +332,77 @@ with tabs[1]:
 
 # Tab 3: Expert Advice
 with tabs[2]:
-    st.markdown("<h2>AI Car Expert</h2>", unsafe_allow_html=True)
-    st.markdown("<p>Chat with our AI assistant for personalized car buying and selling advice</p>", unsafe_allow_html=True)
+    st.markdown("<h2>AI Laptop Expert</h2>", unsafe_allow_html=True)
+    st.markdown("<p>Get personalized advice for your laptop needs</p>", unsafe_allow_html=True)
     
-    # Initialize chat history in session state if it doesn't exist
-    if 'chat_history' not in st.session_state:
-        st.session_state.chat_history = []
+    # Initialize session state
+    if 'messages' not in st.session_state:
+        st.session_state.messages = []
+    
+    # Set up Gemini API - You'll need to add your API key in the code or environment variables
+    try:
+        # Get API key from environment variable
+        api_key = st.secrets["GEMINI_API_KEY"]
+        if api_key:
+            genai.configure(api_key=api_key)
+            model = genai.GenerativeModel('gemini-1.5-pro-latest')
+            is_configured = True
+        else:
+            # Fallback message - this will only be visible to developers, not end users
+            st.info("Note to developer: Set the GEMINI_API_KEY environment variable")
+            is_configured = False
+            model = None
+    except Exception as e:
+        st.error("Error initializing AI assistant")
+        is_configured = False
+        model = None
     
     # Display chat history
-    for message in st.session_state.chat_history:
+    for message in st.session_state.messages:
         with st.chat_message(message["role"]):
-            st.write(message["content"])
+            st.markdown(message["content"])
     
-    # User input
-    user_query = st.chat_input("Ask me anything about cars...")
-    
-    if user_query:
-        # Add user message to chat history
-        st.session_state.chat_history.append({"role": "user", "content": user_query})
-        
-        # Display user message
+    # Chat input
+    if prompt := st.chat_input("Ask about laptops (e.g., 'Which laptop is best for gaming?')"):
+        # Add user message to chat
+        st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
-            st.write(user_query)
+            st.markdown(prompt)
         
         # Generate AI response
-        with st.chat_message("assistant"):
-            # Placeholder for AI response
-            message_placeholder = st.empty()
-            
-            # Simulate an AI generating a response
-            ai_responses = {
-                "budget": "When setting a budget for a car purchase, consider not just the sticker price, but also ongoing costs like insurance, maintenance, fuel, and depreciation. A good rule of thumb is that your total car expenses should be no more than 15-20% of your monthly income.",
-                "electric": "Electric vehicles offer lower running costs, zero emissions, and often better performance. However, they typically have higher upfront costs and require charging infrastructure. Consider your daily driving distance and charging options before making the switch.",
-                "depreciation": "Depreciation is the difference between what you paid for your car and what you can sell it for. Luxury cars tend to depreciate faster, while reliable mainstream brands like Toyota and Honda typically hold their value better.",
-                "maintenance": "Regular maintenance is crucial for your car's longevity. Follow the manufacturer's recommended service schedule, keep your tires properly inflated, and address small issues before they become major problems.",
-                "default": "I'm your AI car advisor. I can help with questions about buying, selling, maintenance, models, or financing. Feel free to ask anything related to automobiles and I'll provide expert guidance."
-            }
-            
-            # Determine which response to use based on user query
-            response = ai_responses["default"]
-            for keyword, resp in ai_responses.items():
-                if keyword in user_query.lower() and keyword != "default":
-                    response = resp
-                    break
-            
-            # Typewriter effect
-            full_response = ""
-            for char in response:
-                full_response += char
-                message_placeholder.markdown(full_response + "▌")
-                time.sleep(0.01)
-            
-            message_placeholder.markdown(full_response)
-            
-            # Add AI response to chat history
-            st.session_state.chat_history.append({"role": "assistant", "content": response})
+        if is_configured:
+            with st.chat_message("assistant"):
+                message_placeholder = st.empty()
+                full_response = ""
+                
+                # Prepare prompt with context
+                context = """
+                You are a laptop expert advisor. Provide helpful, accurate advice about laptops.
+                Focus on the user's specific needs and interests. Your advice should be technical
+                but easy to understand. Recommend specific features based on use cases like gaming,
+                productivity, design work, etc. Keep responses concise and helpful.
+                """
+                
+                try:
+                    response = model.generate_content(context + "\n\nUser question: " + prompt)
+                    
+                    # Simulate typewriter effect
+                    if hasattr(response, 'text'):
+                        response_text = response.text
+                        for chunk in response_text.split():
+                            full_response += chunk + " "
+                            time.sleep(0.05)  # Adjust speed as needed
+                            message_placeholder.markdown(full_response + "▌")
+                        
+                        message_placeholder.markdown(full_response)
+                        st.session_state.messages.append({"role": "assistant", "content": full_response})
+                    else:
+                        message_placeholder.markdown("Sorry, I couldn't generate a response.")
+                except Exception as e:
+                    message_placeholder.markdown(f"Error generating response: {str(e)}")
+        else:
+            with st.chat_message("assistant"):
+                st.markdown("AI assistant is currently unavailable. Please try again later.")
 
 # Footer
 st.markdown("---")
