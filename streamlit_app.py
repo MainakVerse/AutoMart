@@ -156,27 +156,27 @@ brand_mapping = {
 car_types = [
     {
         "name": "Sedan",
-        "image": "https://cdn-icons-png.flaticon.com/512/2736/2736906.png",
+        "image": "https://png.pngtree.com/png-clipart/20220921/ourmid/pngtree-mobil-sedan-merah-png-image_6207797.png",
         "description": "Sedans are four-door passenger cars with a separate trunk compartment. They typically offer comfortable seating for 4-5 passengers with good fuel efficiency and a smooth ride."
     },
     {
         "name": "SUV",
-        "image": "https://png.pngtree.com/png-clipart/20220302/original/pngtree-suv-car-mobil-icon-vector-png-image_7361517.png",
+        "image": "https://png.pngtree.com/png-vector/20230212/ourmid/pngtree-red-suv-car-vector-png-image_6593674.png",
         "description": "Sport Utility Vehicles combine elements of passenger cars with features from off-road vehicles. They offer higher seating position, more cargo space, and often come with all-wheel drive capability."
     },
     {
         "name": "Hatchback",
-        "image": "https://cdn-icons-png.flaticon.com/512/6047/6047336.png",
+        "image": "https://png.pngtree.com/png-vector/20230206/ourmid/pngtree-red-car-side-view-vector-illustration-in-trendy-flat-style-isolated-png-image_6585620.png",
         "description": "Hatchbacks are compact cars with a rear door that opens upward, offering versatile cargo space. They're fuel-efficient, easy to park, and popular in urban environments."
     },
     {
         "name": "Luxury",
-        "image": "https://cdn-icons-png.flaticon.com/512/683/683092.png",
+        "image": "https://png.pngtree.com/png-clipart/20241125/original/pngtree-creative-luxury-red-color-car-clipart-with-transparent-background-png-image_17313230.png",
         "description": "Luxury cars focus on comfort, performance, and cutting-edge technology. They typically feature premium materials, advanced safety features, and powerful engines."
     },
     {
         "name": "Electric",
-        "image": "https://cdn-icons-png.flaticon.com/512/4564/4564602.png",
+        "image": "https://cdn-icons-png.flaticon.com/512/6810/6810772.png",
         "description": "Electric vehicles run on electricity stored in rechargeable batteries. They produce zero emissions, have lower operating costs, and offer instant torque for responsive acceleration."
     }
 ]
@@ -308,7 +308,7 @@ with tabs[1]:
         with col1:
             if i < len(car_types):
                 
-                st.image(car_types[i]["image"], caption=car_types[i]["name"])
+                st.image(car_types[i]["image"], caption=car_types[i]["name"], width="100")
                 st.markdown(f"<h3>{car_types[i]['name']}</h3>", unsafe_allow_html=True)
                 st.write(car_types[i]["description"])
                 st.markdown("</div>", unsafe_allow_html=True)
