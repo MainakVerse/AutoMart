@@ -5,6 +5,7 @@ import time
 import random
 from PIL import Image
 import base64
+import google.generativeai as genai
 
 # Set page configuration with dark theme
 st.set_page_config(
