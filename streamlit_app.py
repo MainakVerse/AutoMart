@@ -171,7 +171,7 @@ car_types = [
     },
     {
         "name": "Luxury",
-        "image": "https://png.pngtree.com/png-clipart/20241125/original/pngtree-creative-luxury-red-color-car-clipart-with-transparent-background-png-image_17313230.png",
+        "image": "https://png.pngtree.com/png-vector/20230416/ourmid/pngtree-red-cabriolet-front-view-luxury-car-icon-vintage-flat-color-vector-png-image_6686793.png",
         "description": "Luxury cars focus on comfort, performance, and cutting-edge technology. They typically feature premium materials, advanced safety features, and powerful engines."
     },
     {
