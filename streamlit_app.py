@@ -308,7 +308,7 @@ with tabs[1]:
         with col1:
             if i < len(car_types):
                 
-                st.image(car_types[i]["image"], caption=car_types[i]["name"], width=100, height=100)
+                st.image(car_types[i]["image"], caption=car_types[i]["name"])
                 st.markdown(f"<h3>{car_types[i]['name']}</h3>", unsafe_allow_html=True)
                 st.write(car_types[i]["description"])
                 st.markdown("</div>", unsafe_allow_html=True)
