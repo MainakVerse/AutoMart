@@ -360,7 +360,7 @@ with tabs[2]:
             st.markdown(message["content"])
     
     # Chat input
-    if prompt := st.chat_input("Ask about laptops (e.g., 'Which laptop is best for gaming?')"):
+    if prompt := st.chat_input("Ask about cars (e.g., 'Which car is best for me?')"):
         # Add user message to chat
         st.session_state.messages.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
