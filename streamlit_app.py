@@ -101,5 +101,5 @@ if st.button('Predict Car Sale Value'):
 
 # Add a footer section for additional information
 st.markdown("---")
-st.markdown("Made with ❤️ by Utkarsh Mishra")
+st.markdown("Made with ❤️ by Mainak")
 st.markdown("Feel free to reach out for any feedback or suggestions.")
