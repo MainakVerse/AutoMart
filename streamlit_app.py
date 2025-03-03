@@ -173,12 +173,8 @@ car_types = [
         "name": "Luxury",
         "image": "https://png.pngtree.com/png-vector/20230416/ourmid/pngtree-red-cabriolet-front-view-luxury-car-icon-vintage-flat-color-vector-png-image_6686793.png",
         "description": "Luxury cars focus on comfort, performance, and cutting-edge technology. They typically feature premium materials, advanced safety features, and powerful engines."
-    },
-    {
-        "name": "Electric",
-        "image": "https://cdn-icons-png.flaticon.com/512/6810/6810772.png",
-        "description": "Electric vehicles run on electricity stored in rechargeable batteries. They produce zero emissions, have lower operating costs, and offer instant torque for responsive acceleration."
     }
+   
 ]
 
 # Sidebar content
