@@ -1,6 +1,6 @@
-# 🚗 AutoEstimator - Predict Your Car Worth
+# 🚗 AutoMart - Predict Your Car Worth
 
-**AutoEstimator** is a powerful machine learning web app that predicts the sale value of used cars! By leveraging a deep learning model built with **TensorFlow**, this app estimates car prices based on various input features like brand, location, mileage, engine specifications, and more. With **Streamlit** as the frontend, the app provides a seamless and interactive user experience to estimate the value of any used car in real-time.
+**AutoMart** is a powerful machine learning web app that predicts the sale value of used cars! By leveraging a deep learning model built with **TensorFlow**, this app estimates car prices based on various input features like brand, location, mileage, engine specifications, and more. With **Streamlit** as the frontend, the app provides a seamless and interactive user experience to estimate the value of any used car in real-time.
 
 ---
 
@@ -23,10 +23,6 @@
    Launch the app by clicking:
 
    
-   [Auto Estimator](https://autoestimator-bpz3rparyd7dh5sb5znyli.streamlit.app/)
-
-   This will open the app in your browser (usually at `http://localhost:8501`).
-
 2. **Enter Car Details**:
 
    Use the intuitive UI to input details about the car:
